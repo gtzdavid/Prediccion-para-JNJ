@@ -17,9 +17,8 @@ El objetivo es:
 - Comparar su desempeño.
 - Generar un pronóstico de **30 días futuros**.
 
-> **Imagen sugerida:**  
-> Logo de Johnson & Johnson o un gráfico simple del precio histórico.  
-> Archivo: `images/jnj_logo.png` o `images/jnj_history.png`
+![Logo JNJ](images/jnj_logo.png)
+
 
 ---
 
@@ -164,6 +163,7 @@ Este análisis es útil para:
 > **Imagen sugerida:**  
 > Una sola gráfica resumen tipo portada, la del forecast final.  
 > Archivo: `images/final_summary.png`
+
 
 
 
