@@ -43,11 +43,12 @@ Variable utilizada: **Close** (precio de cierre diario).
 - Descomposición: tendencia + estacionalidad.
 - ACF y PACF para identificación de autocorrelaciones.
 
-> **Imagen sugerida:**  
-> Tres imágenes:
-> - `images/trend_plot.png`  
-> - `images/decomposition.png`  
-> - `images/acf_pacf.png`
+![Tendencia del precio](images/trend_plot.png)
+
+![Descomposición de la serie](images/decomposition.png)
+
+![ACF y PACF](images/acf_pacf.png)
+`
 
 ---
 
@@ -61,10 +62,6 @@ Se eligió una ventana de **60 timesteps**, que permite capturar tendencias de c
 
 ### 📌 Variables externas
 En este proyecto no se utilizaron otras series adicionales (modelo univariado).
-
-> **Imagen sugerida:**  
-> Un diagrama explicando la ventana deslizante  
-> Archivo: `images/windowing_diagram.png`
 
 ---
 
@@ -85,9 +82,14 @@ Se entrenaron dos modelos:
 - **LSTM:** 64 unidades + Dropout + Dense(32) + salida.
 - **CNN:** Conv1D(64 filtros) → MaxPooling → Conv1D(32 filtros) → Dense → salida.
 
-> **Imagen sugerida:**  
-> Screenshots del `model.summary()` de ambos modelos  
-> Archivos: `images/lstm_summary.png`, `images/cnn_summary.png`
+![Resumen del modelo LSTM](images/lstm_summary.png)
+
+![Resumen del modelo CNN](images/cnn_summary.png)
+
+![Resumen del modelo LSTM 2](images/lstm_summary2.png)
+
+![Resumen del modelo CNN 2](images/cnn_summary2.png)
+
 
 ### 🔧 Justificación de hiperparámetros
 - `window_size = 60`: común en series financieras.
@@ -109,16 +111,13 @@ Se evaluaron ambos modelos en el conjunto de prueba usando:
 
 | Modelo | MSE | RMSE | MAPE |
 |--------|------|---------|---------|
-| **CNN** | X | X | X |
-| **LSTM** | X | X | X |
+| **CNN** | 22.0575 | 4.6965 | 2.1528% |
+| **LSTM** | 7.8846 | 2.8079 | 1.3749% |
 
-> *(Los valores se llenan automáticamente desde el notebook)*
-
-> **Imagen sugerida:**  
-> Ninguna, es una tabla.
 
 ### 📈 Gráfica real vs predicho (test)
-> **Imagen sugerida:** `images/test_comparison.png`
+![Comparación real vs predicción en Test](images/test_comparison.png)
+
 
 ---
 
@@ -127,18 +126,11 @@ Se evaluaron ambos modelos en el conjunto de prueba usando:
 ### 🗓️ Predicción a 30 días
 Ambos modelos generaron un forecast autoregresivo sin usar datos futuros reales.
 
-#### 📋 Tabla de predicciones
-
-| Fecha | CNN ($) | LSTM ($) |
-|-------|----------|------------|
-| 202X-XX-XX | X | X |
-| ... | ... | ... |
-
 #### 📉 Gráfica del forecast (CNN vs LSTM)
-> **Imagen sugerida:** `images/forecast_30days.png`
+![Forecast 30 días (CNN vs LSTM)](images/forecast_30days.png)
 
 #### 🔍 Gráfica con zoom en últimos 120 días
-> **Imagen sugerida:** `images/zoom_forecast.png`
+![Zoom del forecast (últimos 120 días)](images/zoom_forecast.png)
 
 ---
 
@@ -151,8 +143,7 @@ Ambos modelos generaron un forecast autoregresivo sin usar datos futuros reales.
 - El tamaño de ventana influye fuertemente en el MAPE.
 
 ### 🏆 ¿Qué modelo funcionó mejor?
-- Según las métricas, el modelo **_____** tuvo mejor desempeño.
-- La forma del forecast muestra **_____**.
+- Según las métricas, el modelo **LSTM** tuvo mejor desempeño.
 
 ### 📌 Relevancia
 Este análisis es útil para:
@@ -160,9 +151,6 @@ Este análisis es útil para:
 - complementar análisis financiero,  
 - aprendizaje de modelos secuenciales.
 
-> **Imagen sugerida:**  
-> Una sola gráfica resumen tipo portada, la del forecast final.  
-> Archivo: `images/final_summary.png`
 
 
 
