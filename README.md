@@ -82,13 +82,9 @@ Se entrenaron dos modelos:
 - **LSTM:** 64 unidades + Dropout + Dense(32) + salida.
 - **CNN:** Conv1D(64 filtros) → MaxPooling → Conv1D(32 filtros) → Dense → salida.
 
-![Resumen del modelo LSTM](images/lstm_summary.png)
+![Resumen del modelo LSTM](images/LSTM_summary.png)
 
-![Resumen del modelo CNN](images/cnn_summary.png)
-
-![Resumen del modelo LSTM 2](images/lstm_summary2.png)
-
-![Resumen del modelo CNN 2](images/cnn_summary2.png)
+![Resumen del modelo CNN](images/CNN_summary.png)
 
 
 ### 🔧 Justificación de hiperparámetros
@@ -150,6 +146,7 @@ Este análisis es útil para:
 - decisiones de inversión personal,  
 - complementar análisis financiero,  
 - aprendizaje de modelos secuenciales.
+
 
 
 
